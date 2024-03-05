@@ -1,0 +1,23 @@
+footer {
+    width: 100%;
+    padding: 2rem;
+}
+
+.footer-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.profesional-link {
+    display: flex;
+    flex-direction: row;
+}
+
+.profesional-link img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0;
+    margin: 1rem;
+}

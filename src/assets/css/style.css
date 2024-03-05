@@ -1,0 +1,212 @@
+/* Josh W Comeau Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+#root, #__next {
+    isolation: isolate;
+}
+/* Font */
+@font-face {
+    font-family: 'Work Sans';
+    src: url('../fonts/WorkSans-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;  
+    font-style: normal;
+}
+/* Additional Global Styles */
+body {
+    /* Credit https://www.joshwcomeau.com/gradient-generator/ */
+    background-image: linear-gradient(
+    150deg,
+    hsl(0deg 0% 0%) 0%,
+    hsl(343deg 0% 6%) 14%,
+    hsl(344deg 0% 10%) 32%,
+    hsl(344deg 0% 14%) 51%,
+    hsl(344deg 0% 17%) 66%,
+    hsl(344deg 0% 21%) 79%,
+    hsl(344deg 0% 25%) 88%,
+    hsl(344deg 0% 29%) 94%,
+    hsl(344deg 0% 33%) 98%,
+    hsl(0deg 0% 37%) 100%
+    );
+    color: beige;
+    font-family: 'Work Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    /* padding: 1rem; */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 280px;
+}
+
+/* body {
+    margin: 0;
+    display: flex;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+} */
+
+main {
+    width: 100%;
+}
+/* Navigation */
+.header-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    z-index: 1000;
+    padding: 0 10%; 
+}
+
+.logo {
+    font-size: 3.5rem;
+    font-weight: 100;
+    color: beige;
+    text-decoration: none;
+}
+
+.container-menu-items {
+    margin-left: 20%;
+    width: 100%;
+}
+
+.container-menu-items a {
+    font-size: 1.5rem;
+    color: beige;
+    text-decoration: none;
+    font-weight: 350;
+    margin-left: 2rem;
+}
+
+#checkbox {
+    display: none;
+}
+
+.icons {
+    position: absolute;
+    right: 10%;
+    cursor: pointer;
+    display: none;
+    font-size: 3.5rem;
+    color: beige;
+}
+/* Media queries */
+@media (max-width: 992px) {
+    /* Header */
+    .header-section {
+        min-width: 280px;
+    }
+
+    .icons {
+        display: inline-flex;
+    }
+
+    #checkbox:checked~.icons #menu-icon {
+        display: none;
+    }
+
+    .icons #close-icon {
+        display: none;
+    }
+
+    #checkbox:checked~.icons #close-icon {
+        display: block;
+    }
+
+    .container-menu-items {
+        margin-left: 0;
+        width: auto;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background-color: black;
+        overflow: hidden;
+        transition: 1.5s ease;
+    }
+
+    #checkbox:checked~.navbar {
+        height: 18rem;
+    }
+
+    .navbar a {
+        transform: translateY(-60px);
+        transition: 1s ease;
+        display: block;
+        margin: 1rem 0;
+        text-align: center;
+        opacity: 0;
+        font-size: 1.5rem;
+    }
+
+    #checkbox:checked~.navbar a {
+        transform: translateY(0px);
+        transition-delay: calc(0.25s * var(--item));
+        opacity: 1;
+    }
+}
+
+@media (min-width: 1280px) {
+    .header-section {
+        padding: 0 20%; 
+    }
+}
+
+/* Additional Media Queries */ 
+
+/* @media (min-width: 640px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (min-width: 1024px) {
+
+}
+
+@media (min-width: 1536px) {
+
+} */
+
+/* I would like to extend my gratitude to Codehal for their insightful tutorial on CSS techniques and the concept of creating a responsive hamburger menu using just HTML and CSS. Their guidance provided a solid foundation that inspired me to explore and develop my own unique navigation bar. While the core principles were derived from their tutorial, the design and implementation of my navbar are original creations that reflect my personal interpretation and enhancements to the concept. Credit for the concept of a hamburger menu button animation and menu opening transition animation using CSS and HTML also goes to Codehal. */ 
+
