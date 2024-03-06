@@ -1,4 +1,6 @@
 import { useEffect } from 'react'
+import { Outlet, Link } from 'react-router-dom';
+import Footer from './components/Footer';
 import './assets/css/style.css'
 import favicon from './assets/pictures/svg/react.svg'
 
@@ -36,20 +38,20 @@ function App() {
         {/* Nav Bar */}
         <nav className="navbar">
           <div className="container-menu-items">
-            <a href="/" style={{ '--item': '0' }}>Home</a>
-            <a href="/aboutme" style={{ '--item': '0' }}>About Me</a>
-            <a href="/work" style={{ '--item': '1' }}>Work</a>
-            <a href="/contact" style={{ '--item': '2' }}>Contact</a>
-            <a href="/resume" style={{ '--item': '3' }}>Resume</a>
+            <Link to="/" style={{ '--item': '0' }}>Home</Link>
+            <Link to="/aboutme" style={{ '--item': '0' }}>About Me</Link>
+            <Link to="/work" style={{ '--item': '1' }}>Work</Link>
+            <Link to="/contact" style={{ '--item': '2' }}>Contact</Link>
+            <Link to="/resume" style={{ '--item': '3' }}>Resume</Link>
           </div>
         </nav>
       </header>
       {/* Main */}
       <main className="main-container">
-        {/* Components here */}
+        <Outlet />
       </main>
       {/* Footer */}
-      {/* Component Here */}
+      <Footer />
     </>
   )
 }
