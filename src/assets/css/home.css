@@ -17,6 +17,13 @@
     color: orange;
 }
 
+/* Adress section height issue on small screens */
+@media (max-width: 300px) {
+    .home-section {
+        margin-top: 6rem;
+    }
+}
+
 @media (min-width: 640px) {
     /* Home */
     .greeting h2 {

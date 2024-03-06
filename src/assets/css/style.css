@@ -156,7 +156,7 @@ main {
         height: 0;
         background-color: black;
         overflow: hidden;
-        transition: 1.5s ease;
+        transition: 1.2s ease;
     }
 
     #checkbox:checked~.navbar {

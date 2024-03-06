@@ -1,5 +1,5 @@
 .contact-section {
-    width: 100%;
+    width: 100vw;
     margin-top: 20px;
     padding: 0 10%; 
     text-align: center;
@@ -29,6 +29,14 @@
     background-color: hsl(0, 0%, 43%);
 }
 
+.contact-form textarea {
+    text-align: left;
+    border-radius: 0.7rem;
+    padding: 0.25rem 0;
+    border: none;
+    background-color: hsl(0, 0%, 43%);
+}
+
 .contact-form button {
     margin-top: 3rem;
     padding: 0.75rem 0;
@@ -46,8 +54,12 @@
 
 
 /* Media Queries  */
-@media (min-width: 640px) {
-    
+
+/* Adress form height issue on small screens */
+@media (max-width: 400px) {
+    .contact-section {
+        margin-top: 3rem;
+    }
 }
 
 @media (min-width: 1280px) {
