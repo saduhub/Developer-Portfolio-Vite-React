@@ -1,4 +1,6 @@
+// PNG
 import profile from '../assets/pictures/profile pic blurred.png';
+// SVG
 import reactSvg from '../assets/pictures/svg/react.svg';
 import html5Svg from '../assets/pictures/svg/html5.svg';
 import css3Svg from '../assets/pictures/svg/css3.svg';
@@ -29,8 +31,12 @@ import eslintSvg from '../assets/pictures/svg/eslint.svg';
 import insomniaSvg from '../assets/pictures/svg/insomnia.svg';
 import vscodeSvg from '../assets/pictures/svg/visualstudiocode.svg';
 import codesandboxSvg from '../assets/pictures/svg/codesandbox.svg';
+// Styles
 import '../assets/css/aboutme.css';
-
+// Components
+import SkillSet from '../components/aboutme/SkillSet';
+import AdditionalSkills from '../components/aboutme/AdditionalSkills';
+// Skill data to pass down as props to child components.
 const skills = {
   coreLanguages: [
     { img: html5Svg, alt: 'HTML5 Logo' },
@@ -88,36 +94,6 @@ const skills = {
   ],
 };
 
-function SkillSet({ title, skills }) {
-  return (
-    <>
-      <h3 className="skill-set-category">{title}</h3>
-      <div className="tech-grid">
-        {skills.map((skill, index) => (
-          <div key={index}>
-            <img src={skill.img} alt={skill.alt} />
-          </div>
-        ))}
-      </div>
-    </>
-  );
-}
-
-function AdditionalSkills({ title, skills }) {
-  return (
-    <>
-      <h3 className="skill-set-category">{title}</h3>
-      <div className="skills-grid">
-        {skills.map((skill, index) => (
-          <div key={index} className="skill-div" style={{ backgroundColor: skill.backgroundColor || 'transparent' }}>
-            <h3>{skill.title}</h3>
-          </div>
-        ))}
-      </div>
-    </>
-  );
-}
-
 function Aboutme() {
   return (
     <section className="about-me-section">
@@ -126,7 +102,7 @@ function Aboutme() {
       <h2>Creative.</h2>
       <img src={profile} alt="Profile of Jorge Duarte" />
       <h4 className="self-description">
-        Hello! I am a budding full-stack developer taking my first steps into the exciting world of web development. While I may be at the start of my journey, I bring a strong work ethic, creative flair, and ambition to the table. As someone who is transitioning their programming hobby into a full-time career, I can say with enthusiasm that I am truly excited about the possibilities. My dedication to programming has evolved from a pastime into a passion for programming, new technologies, and the world of development. My eagerness to learn and adapt helps me stay on top of industry trends and write code that I hope will improve user experience. I am excited about the path ahead, and I am confident in my ability to grow and contribute to the community. Let's connect and explore the exciting possibilities that lie ahead!
+        Hello! I&apos;m a budding full-stack developer taking my first steps into the exciting world of web development. While I may be at the start of my journey, I bring a strong work ethic, creative flair, and ambition to the table. As someone who is transitioning their programming hobby into a full-time career, I can say with enthusiasm that I&apos;m truly excited about the possibilities. My dedication to programming has evolved from a pastime into a passion for programming, new technologies, and the world of development. My eagerness to learn and adapt helps me stay on top of industry trends and write code that I hope will improve user experience. I&apos;m excited about the path ahead, and I&apos;m confident in my ability to grow and contribute to the community. Let&apos;s connect and explore the exciting possibilities that lie ahead!
       </h4>
       <div className="stats-grid">
         <div className="stat-item">
