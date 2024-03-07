@@ -43,155 +43,88 @@ import renderSvg from '../assets/pictures/svg/render.svg';
 // import eslintSvg from '../assets/pictures/svg/eslint.svg';
 // import vscodeSvg from '../assets/pictures/svg/visualstudiocode.svg';
 // import codesandboxSvg from '../assets/pictures/svg/codesandbox.svg';
+// Components
+import Project from '../components/work/Project.jsx';
+
+const projects = [
+  {
+    name: "TuneStack",
+    image: tuneStack,
+    url: "https://github.com/jenho-webdev/TuneStack",
+    description: "is an application for storing music. My role in this group was backend related and tied to models and database management.",
+    technologies: [npmSvg, javascriptSvg, mysqlSvg, sequelizeSvg, nodejsSvg, expressSvg, insomniaSvg, herokuSvg],
+  },
+  {
+    name: "VideoVault",
+    image: videoVault,
+    url: "https://github.com/saduhub/VideoVault",
+    description: "is an application for TikTok videos, picutures, and gifs. My role in this group was that of leader and full-stack developer.",
+    technologies: [npmSvg, javascriptSvg, mysqlSvg, sequelizeSvg, nodejsSvg, expressSvg, handlebarsSvg, herokuSvg],
+  },
+  {
+    name: "SongSensei",
+    image: songsensei,
+    url: "https://github.com/saduhub/SongSensei",
+    description: "is an application for keeping up with your favorite artists. My role in this group was that of leader and frontend developer.",
+    technologies: [javascriptSvg, jquerySvg, tailwindcssSvg, css3Svg, html5Svg],
+  },
+  {
+    name: "CareConnect",
+    image: careconnect,
+    url: "https://github.com/jenho-webdev/CareConnect",
+    description: "is an application for users to plan, volunteer, and coordinate assistance seamlessly. My role in this group was that of backend developer.",
+    technologies: [npmSvg, javascriptSvg, mongodbSvg, mongooseSvg, nodejsSvg, expressSvg, graphqlSvg, apolloSvg, herokuSvg],
+  },
+  {
+    name: "GameBargains",
+    image: gamebargains,
+    url: "https://github.com/Kiyodosan/game-store-app",
+    description: "is an application for users to get the best deals from the Steam store. My role in this group was that of leader and full-stack developer.",
+    technologies: [npmSvg, javascriptSvg, jquerySvg, css3Svg, html5Svg, nodejsSvg, expressSvg, renderSvg],
+  },
+  {
+    name: "RockPaperScissors",
+    image: rockpaperscissors,
+    url: "https://rock-paper-scissors-5871f573f399.herokuapp.com/",
+    description: "is a progressive web application for users to take a break and enjoy a classic on or offline. My role was that of full-stack developer.",
+    technologies: [npmSvg, typescriptSvg, webpackSvg, tailwindcssSvg, css3Svg, html5Svg, nodejsSvg, lighthouseSvg, herokuSvg],
+  },
+  {
+    name: "PixelPenny",
+    image: pixelpenny,
+    url: "https://github.com/saduhub",
+    description: "is an application for users to support their favorite creators. My role was that of full-stack developer.",
+    technologies: [npmSvg, reactSvg, javascriptSvg, nodejsSvg, expressSvg, mongodbSvg, mongooseSvg, graphqlSvg, apolloSvg, herokuSvg],
+  },
+  {
+    name: "CodeQuiz",
+    image: codequiz,
+    url: "https://github.com/saduhub/code-quiz",
+    description: "is an application for users to test their coding knowledge. My role was that of frontend developer.",
+    technologies: [npmSvg, typescriptSvg, nodejsSvg, jquerySvg, css3Svg, html5Svg],
+  },
+  {
+    name: "PasswordGenerator",
+    image: passwordgenerator,
+    url: "https://github.com/saduhub/Password_Generator",
+    description: "is an application for users to generate unique passwords - no more random keystrokes! My role was that of frontend developer.",
+    technologies: [npmSvg, typescriptSvg, nodejsSvg, css3Svg, html5Svg],
+  },
+];
+
 function Work() {
-    return (
-      <section className="work-section">
-          <h3 className="work-header">Checkout my work!</h3>
-          <h4 className="work-description">Below is an overview of the work that constitutes the core of my experience. Also shown, are the specific technologies I honed during the development process of each. Six of these are collaborations in which I played a crucial frontend, backend, or full-stack role. Either as a solo developer or as a member of a developer team, I take pride in delivering my best work and sharpening my skills with every opportunity.</h4>
-          <div className="work-grid">
-              <div className="project-div">
-                  <a href="https://github.com/jenho-webdev/TuneStack" target="_blank" rel="noreferrer">
-                      <img src={tuneStack} alt="Screenshot of TuneStack Application" className="project-img" />
-                  </a>
-                  <div className="tech-used">
-                      <img src={npmSvg} alt="Node Package Manager Logo" />
-                      <img src={javascriptSvg} alt="JavaScript Logo" />
-                      <img src={mysqlSvg} alt="MySQL Logo" />
-                      <img src={sequelizeSvg} alt="Sequelize Logo" />
-                      <img src={nodejsSvg} alt="Node JS Logo" />
-                      <img src={expressSvg} alt="Express Logo" />
-                      <img src={insomniaSvg} alt="Insomnia Logo" />
-                      <img src={herokuSvg} alt="Heroku Logo" />
-                  </div>
-                  <h4> <span className="project-span">Tunestack</span> is an application for storing music. My role in this group was backend related and tied to models and database management.</h4>
-              </div>
-              <div className="project-div">
-                  <a href="https://github.com/saduhub/VideoVault" target="_blank" rel="noreferrer">
-                      <img src={videoVault} alt="Screenshot of VideoVault Application" className="project-img" />
-                  </a>
-                  <div className="tech-used">
-                      <img src={npmSvg} alt="Node Package Manager Logo" />
-                      <img src={javascriptSvg} alt="JavaScript Logo" />
-                      <img src={mysqlSvg} alt="MySQL Logo" />
-                      <img src={sequelizeSvg} alt="Sequelize Logo" />
-                      <img src={nodejsSvg} alt="Node JS Logo" />
-                      <img src={expressSvg} alt="Express Logo" />
-                      <img src={handlebarsSvg} alt="Handlebars Logo" />
-                      <img src={herokuSvg} alt="Heroku Logo" />
-                  </div>
-                  <h4><span className="project-span">VideoVault</span> is an application for TikTok videos, picutures, and gifs. My role in this group was that of leader and full-stack developer.</h4>
-              </div>
-              <div className="project-div">
-                  <a href="https://github.com/saduhub/SongSensei" target="_blank" rel="noreferrer">
-                      <img src={songsensei} alt="Screenshot of SongSensei Application" className="project-img" />
-                  </a>
-                  <div className="tech-used">
-                      <img src={javascriptSvg} alt="JavaScript Logo" />
-                      <img src={jquerySvg} alt="jQuery Logo" />
-                      <img src={tailwindcssSvg} alt="Tailwind CSS Logo" />
-                      <img src={css3Svg} alt="CSS3 Logo" />
-                      <img src={html5Svg} alt="HTML5 Logo" />
-                  </div>
-                  <h4><span className="project-span">SongSensei</span> is an application for keeping up with your favorite artists. My role in this group was that of leader and frontend developer.</h4>
-              </div>
-              <div className="project-div">
-                  <a href="https://github.com/jenho-webdev/CareConnect" target="_blank" rel="noreferrer">
-                      <img src={careconnect} alt="Screenshot of CareConnect Application" className="project-img" />
-                  </a>
-                  <div className="tech-used">
-                      <img src={npmSvg} alt="Node Package Manager Logo" />
-                      <img src={javascriptSvg} alt="JavaScript Logo" />
-                      <img src={mongodbSvg} alt="Mongo DB Logo" />
-                      <img src={mongooseSvg} alt="Mongoose Logo" />
-                      <img src={nodejsSvg} alt="Node JS Logo" />
-                      <img src={expressSvg} alt="Express Logo" />
-                      <img src={graphqlSvg} alt="Graph QL Logo" />
-                      <img src={apolloSvg} alt="Apollo Graph QL Logo" />
-                      <img src={herokuSvg} alt="Heroku Logo" />
-                  </div>
-                  <h4><span className="project-span">CareConnect</span> is an application for users to plan, volunteer, and coordinate assistance seamlessly. My role in this group was that of backend developer.</h4>
-              </div>
-              <div className="project-div">
-                  <a href="https://github.com/Kiyodosan/game-store-app" target="_blank" rel="noreferrer">
-                      <img src={gamebargains} alt="Screenshot of GameBargains Application" className="project-img" />
-                  </a>
-                  <div className="tech-used">
-                      <img src={npmSvg} alt="Node Package Manager Logo" />
-                      <img src={javascriptSvg} alt="JavaScript Logo" />
-                      <img src={jquerySvg} alt="jQuery Logo" />
-                      <img src={css3Svg} alt="CSS3 Logo" />
-                      <img src={html5Svg} alt="HTML5 Logo" />
-                      <img src={nodejsSvg} alt="Node JS Logo" />
-                      <img src={expressSvg} alt="Express Logo" />
-                      <img src={renderSvg} alt="Render Logo" />
-                  </div>
-                  <h4><span className="project-span">GameBargains</span> is an application for users to get the best deals from the Steam store. My role in this group was that of leader and full-stack developer.</h4>
-              </div>
-              <div className="project-div">
-                  <a href="https://rock-paper-scissors-5871f573f399.herokuapp.com/" target="_blank" rel="noreferrer">
-                      <img src={rockpaperscissors} alt="Screenshot of RockPaperScissors Application" className="project-img" />
-                  </a>
-                  <div className="tech-used">
-                      <img src={npmSvg} alt="Node Package Manager Logo" />
-                      <img src={typescriptSvg} alt="typescript Logo" />
-                      <img src={webpackSvg} alt="Webpack Logo" />
-                      <img src={tailwindcssSvg} alt="Tailwind CSS Logo" />
-                      <img src={css3Svg} alt="CSS3 Logo" />
-                      <img src={html5Svg} alt="HTML5 Logo" />
-                      <img src={nodejsSvg} alt="Node JS Logo" />
-                      <img src={lighthouseSvg} alt="Google Lighthouse Logo" />
-                      <img src={herokuSvg} alt="Heroku Logo" />
-                  </div>
-                  <h4><span className="project-span">RockPaperScissors</span> is a progressive web application for users to take a break and enjoy a classNameic on or offline. My role was that of full-stack developer.</h4>
-              </div>
-              <div className="project-div">
-                  <a href="https://github.com/saduhub" target="_blank" rel="noreferrer">
-                      <img src={pixelpenny} alt="Screenshot of PixelPenny Application" className="project-img" />
-                  </a>
-                  <div className="tech-used">
-                      <img src={npmSvg} alt="Node Package Manager Logo" />
-                      <img src={reactSvg} alt="React Logo" />
-                      <img src={javascriptSvg} alt="JavaScript Logo" />
-                      <img src={nodejsSvg} alt="Node JS Logo" />
-                      <img src={expressSvg} alt="Express Logo" />
-                      <img src={mongodbSvg} alt="Mongo DB Logo" />
-                      <img src={mongooseSvg} alt="Mongoose Logo" />
-                      <img src={graphqlSvg} alt="Graph QL Logo" />
-                      <img src={apolloSvg} alt="Apollo Graph QL Logo" />
-                      <img src={herokuSvg} alt="Heroku Logo" />
-                  </div>
-                  <h4><span className="project-span">PixelPenny</span> is an application for users to support their favorite creators. My role was that of full-stack developer.</h4>
-              </div>
-              <div className="project-div">
-                  <a href="https://github.com/saduhub/code-quiz" target="_blank" rel="noreferrer">
-                      <img src={codequiz} alt="Screenshot of CodeQuiz Application" className="project-img" />
-                  </a>
-                  <div className="tech-used">
-                      <img src={npmSvg} alt="Node Package Manager Logo" />
-                      <img src={typescriptSvg} alt="typescript Logo" />
-                      <img src={nodejsSvg} alt="Node JS Logo" />
-                      <img src={jquerySvg} alt="jQuery Logo" />
-                      <img src={css3Svg} alt="CSS3 Logo" />
-                      <img src={html5Svg} alt="HTML5 Logo" />
-                  </div>
-                  <h4><span className="project-span">CodeQuiz</span> is an application for users to test their coding knowledge. My role was that of frontend developer.</h4>
-              </div>
-              <div className="project-div">
-                  <a href="https://github.com/saduhub/Password_Generator" target="_blank" rel="noreferrer">
-                      <img src={passwordgenerator} alt="Screenshot of Password Generator Application" className="project-img" />
-                  </a>
-                  <div className="tech-used">
-                      <img src={npmSvg} alt="Node Package Manager Logo" />
-                      <img src={typescriptSvg} alt="typescript Logo" />
-                      <img src={nodejsSvg} alt="Node JS Logo" />
-                      <img src={css3Svg} alt="CSS3 Logo" />
-                      <img src={html5Svg} alt="HTML5 Logo" />
-                  </div>
-                  <h4><span className="project-span">PasswordGenerator</span> is an application for users to generate unique passwords - no more random keystrokes! My role was that of frontend developer.</h4>
-              </div>
-          </div>
-      </section>
-    );
+  return (
+    <section className="work-section">
+      <h3 className="work-header">Checkout my work!</h3>
+      <h4 className="work-description">Below is an overview of the work that constitutes the core of my experience. Also shown, are the specific technologies I honed during the development process of each. Six of these are collaborations in which I played a crucial frontend, backend, or full-stack role. Either as a solo developer or as a member of a developer team, I take pride in delivering my best work and sharpening my skills with every opportunity.</h4>
+      <div className="work-grid">
+        {projects.map((project, index) => (
+          // Pass down a project object to the Project component as props. One project object passed to each Project component as the array of projects is iterated.
+          <Project key={index} project={project} />
+        ))}
+      </div>
+    </section>
+  );
 }
-  
+
 export default Work;
