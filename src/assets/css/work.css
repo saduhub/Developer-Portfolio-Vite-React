@@ -73,6 +73,7 @@
 .tech-used {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
 }
 
 .tech-used img {

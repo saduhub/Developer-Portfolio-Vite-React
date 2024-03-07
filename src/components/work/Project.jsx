@@ -15,7 +15,9 @@ const Project = ({ project }) => {
       </div>
       <div className="tech-used">
         {project.technologies.map((tech, index) => (
-          <img key={index} src={tech.src} alt={tech.alt} />
+          <a key={index} href={tech.href} target="_blank" rel="noreferrer">
+            <img key={index} src={tech.src} alt={tech.alt}/>
+          </a>
         ))}
       </div>
       <h4><span className="project-span">{project.name}</span> {project.description}</h4>
