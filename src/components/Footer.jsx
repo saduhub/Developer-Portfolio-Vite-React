@@ -1,8 +1,13 @@
-function Footer() {
+function Footer({gitHub, linkedIn}) {
     return (
-      <div>
-        <h1>Footer</h1>
-      </div>
+      <footer className="footer">
+        <a href="https://github.com/saduhub" target="_blank" rel="noreferrer">
+          <img src={gitHub} alt="GitHub Logo" />
+        </a>
+        <a href="https://www.linkedin.com/in/jorge-duarte-625105281/" target="_blank" rel="noreferrer">
+          <img src={linkedIn} alt="LinkedIn Logo" />
+        </a>
+      </footer>
     );
 }
   

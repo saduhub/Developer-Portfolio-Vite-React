@@ -1,8 +1,13 @@
 import { useEffect } from 'react'
 import { Outlet, Link, useLocation } from 'react-router-dom';
+// Components
 import Footer from './components/Footer';
+// Styles
 import './assets/css/style.css'
+// Images
 import favicon from './assets/pictures/svg/react.svg'
+import github from './assets/pictures/github-mark-white.png'
+import linkedin from './assets/pictures/LI-In-Bug.png'
 
 function loadFavicon() {
   const link = document.querySelector("link[rel~='icon']");
@@ -52,7 +57,7 @@ function App() {
         <Outlet />
       </main>
       {/* Footer */}
-      <Footer />
+      <Footer linkedIn={linkedin} gitHub={github}/>
     </>
   )
 }
