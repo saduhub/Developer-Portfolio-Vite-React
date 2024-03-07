@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { Outlet, Link } from 'react-router-dom';
+import { Outlet, Link, useLocation } from 'react-router-dom';
 import Footer from './components/Footer';
 import './assets/css/style.css'
 import favicon from './assets/pictures/svg/react.svg'
@@ -19,6 +19,7 @@ function loadBoxicons() {
 }
 
 function App() {
+  const location = useLocation();
   // Add Link to head after component mounts with useEffect hook (side effect).  
   useEffect(() => {
     loadFavicon();
@@ -38,11 +39,11 @@ function App() {
         {/* Nav Bar */}
         <nav className="navbar">
           <div className="container-menu-items">
-            <Link to="/" style={{ '--item': '0' }}>Home</Link>
-            <Link to="/aboutme" style={{ '--item': '0' }}>About Me</Link>
-            <Link to="/work" style={{ '--item': '1' }}>Work</Link>
-            <Link to="/contact" style={{ '--item': '2' }}>Contact</Link>
-            <Link to="/resume" style={{ '--item': '3' }}>Resume</Link>
+            <Link to="/" style={{ color: location.pathname === '/' ? 'orange' : 'beige','--item': '0' }}>Home</Link>
+            <Link to="/aboutme" style={{ color: location.pathname === '/aboutme' ? 'orange' : 'beige', '--item': '0' }}>About Me</Link>
+            <Link to="/work" style={{ color: location.pathname === '/work' ? 'orange' : 'beige', '--item': '1' }}>Work</Link>
+            <Link to="/contact" style={{ color: location.pathname === '/contact' ? 'orange' : 'beige', '--item': '2' }}>Contact</Link>
+            <Link to="/resume" style={{ color: location.pathname === '/resume' ? 'orange' : 'beige', '--item': '3' }}>Resume</Link>
           </div>
         </nav>
       </header>
