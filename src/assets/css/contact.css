@@ -24,7 +24,7 @@
 .contact-form input {
     text-align: left;
     border-radius: 0.7rem;
-    padding: 0.25rem 0;
+    padding: 0.25rem;
     border: none;
     background-color: hsl(0, 0%, 43%);
 }
